@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Règlement | Astralium RP</title>
+<title>Règlements | Astralium RP</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -29,9 +29,9 @@ nav {
     height: 70px;
     margin: 0 auto;
     padding: 0 20px;
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
@@ -41,7 +41,6 @@ nav {
 }
 
 .nav-center {
-    justify-self: center;
     list-style: none;
     display: flex;
     gap: 25px;
@@ -59,23 +58,63 @@ nav {
     color: #00f0ff;
 }
 
-/* CONTENT */
-section {
-    max-width: 1000px;
-    margin: 100px auto;
+/* HERO REGLEMENT */
+.reglement-hero {
+    height: 40vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("https://images.unsplash.com/photo-1604014237800-1c9102c219da?q=80&w=1600&auto=format&fit=crop");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.reglement-hero h1 {
+    font-size: 48px;
+    letter-spacing: 3px;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: 60px auto;
     padding: 0 20px;
 }
 
-.card {
-    background: linear-gradient(180deg, #121836, #0f142e);
-    padding: 32px;
-    border-radius: 18px;
-    margin-bottom: 30px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
 }
 
-h1, h2 {
+/* CARD */
+.card {
+    background: linear-gradient(180deg, #121836, #0f142e);
+    padding: 26px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease;
+    border-left: 4px solid #00f0ff;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.card h2 {
+    margin: 0 0 10px;
     color: #00f0ff;
+}
+
+.card p {
+    margin: 0;
+    opacity: 0.85;
+    font-size: 15px;
 }
 
 /* FOOTER */
@@ -102,21 +141,35 @@ footer {
     </div>
 </nav>
 
-<section>
-<section>
-    <div class="card">
-        <h1>📜 Règlement Général</h1>
-        <p>Respect, RP sérieux et fair-play obligatoires.</p>
-    </div>
+<!-- HERO -->
+<section class="reglement-hero">
+    <h1>RÈGLEMENTS</h1>
+</section>
 
-    <div class="card">
-        <h2>1️⃣ Respect</h2>
-        <p>Aucun propos toxique ou discriminatoire.</p>
-    </div>
+<!-- CONTENT -->
+<section class="container">
+    <div class="grid">
 
-    <div class="card">
-        <h2>2️⃣ RolePlay</h2>
-        <p>NoRP, PowerGaming, MetaGaming interdits.</p>
+        <div class="card">
+            <h2>📘 Règlement HRP</h2>
+            <p>Règles hors roleplay : respect, communication, comportement général.</p>
+        </div>
+
+        <div class="card">
+            <h2>🌍 Règlement Global</h2>
+            <p>Règles générales applicables à tous les joueurs sur le serveur.</p>
+        </div>
+
+        <div class="card">
+            <h2>⚖️ RP Légal</h2>
+            <p>Forces de l’ordre, services publics, entreprises légales.</p>
+        </div>
+
+        <div class="card">
+            <h2>🔪 RP Illégal</h2>
+            <p>Activités criminelles, organisations, limites RP illégal.</p>
+        </div>
+
     </div>
 </section>
 
