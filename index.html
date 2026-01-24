@@ -6,12 +6,52 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0a0f1f;
+    /* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(10, 15, 31, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 1000;
+}
+
+.nav-logo {
+    font-size: 22px;
+    font-weight: bold;
     color: #ffffff;
 }
+
+.nav-links a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #00f0ff;
+}
+
+/* Décalage du contenu */
+body {
+    padding-top: 70px;
+}
+
+body
+    <nav class="navbar">
+    <div class="nav-logo">Astralium RP</div>
+    <div class="nav-links">
+        <a href="#">Accueil</a>
+        <a href="https://discord.gg/TONLIEN" target="_blank">Discord</a>
+        <a href="#serveur">Serveur</a>
+    </div>
+</nav>
+
 
 /* NAVBAR */
 nav {
