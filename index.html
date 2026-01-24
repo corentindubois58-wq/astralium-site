@@ -1,103 +1,150 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Astralium RP | Serveur FiveM</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #0a0f1f;
-            color: #ffffff;
-        }
-        header {
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #00f0ff, #0047ff);
-        }
-        header h1 {
-            font-size: 48px;
-            margin: 0;
-        }
-        header p {
-            font-size: 18px;
-            opacity: 0.9;
-        }
-        section {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .card {
-            background: #11162a;
-            padding: 30px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-        }
-        a.button {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 24px;
-            background: #00f0ff;
-            color: #000;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-        }
-        a.button:hover {
-            background: #00c8d4;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            opacity: 0.6;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Astralium RP | Serveur FiveM</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0a0f1f;
+    color: #ffffff;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 15, 31, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 1000;
+}
+nav .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #00f0ff;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    color: #00f0ff;
+}
+
+/* HERO */
+header {
+    height: 100vh;
+    background: linear-gradient(135deg, #001b3a, #0a0f1f);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+header h1 {
+    font-size: 52px;
+    margin-bottom: 10px;
+}
+header p {
+    font-size: 20px;
+    opacity: 0.9;
+}
+header .buttons a {
+    display: inline-block;
+    margin: 15px 10px;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn-main {
+    background: #00f0ff;
+    color: #000;
+}
+.btn-secondary {
+    border: 2px solid #00f0ff;
+    color: #00f0ff;
+}
+.btn-secondary:hover {
+    background: #00f0ff;
+    color: #000;
+}
+
+/* SECTIONS */
+section {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+.card {
+    background: #11162a;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    opacity: 0.6;
+}
+</style>
 </head>
+
 <body>
 
-<header>
-    <h1>Astralium RP</h1>
-    <p>Serveur FiveM RolePlay sérieux • Whitelist</p>
+<nav>
+    <div class="logo">Astralium RP</div>
+    <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="https://discord.gg/TONLIEN" target="_blank">Discord</a></li>
+        <li><a href="#serveur">Serveur</a></li>
+    </ul>
+</nav>
+
+<header id="accueil">
+    <div>
+        <h1>Astralium RP</h1>
+        <p>Serveur FiveM RolePlay sérieux • Whitelist</p>
+        <div class="buttons">
+            <a href="fivem://connect/83.150.218.242:25044" class="btn-main">🎮 Rejoindre le serveur</a>
+            <a href="https://discord.gg/8SVGM7yZW6" class="btn-secondary">💬 Discord</a>
+        </div>
+    </div>
 </header>
 
-<section>
+<section id="serveur">
     <div class="card">
-        <h2>🌌 Bienvenue sur Astralium RP</h2>
+        <h2>🌌 À propos du serveur</h2>
         <p>
-            Astralium RP est un serveur FiveM roleplay sérieux basé sur un RP
-            réaliste, immersif et respectueux. Notre objectif est de proposer
-            une expérience unique à chaque joueur.
+            Astralium RP est un serveur FiveM roleplay sérieux basé sur une
+            immersion totale, un RP réaliste et une communauté mature.
+            L’accès se fait via une whitelist afin de garantir la qualité du RP.
         </p>
     </div>
 
     <div class="card">
-        <h2>📜 Règlement</h2>
-        <p>
-            Le respect du règlement est obligatoire pour garantir une
-            expérience RP de qualité pour tous les joueurs.
-        </p>
-        <a href="#" class="button">Voir le règlement</a>
-    </div>
-
-    <div class="card">
-        <h2>📝 Whitelist</h2>
-        <p>
-            L’accès au serveur se fait via une whitelist afin de garantir un
-            niveau de jeu sérieux et cohérent.
-        </p>
-        <a href="#" class="button">Procédure Whitelist</a>
-    </div>
-
-    <div class="card">
-        <h2>💬 Discord</h2>
-        <p>
-            Rejoins notre Discord officiel pour suivre l’actualité du serveur
-            et échanger avec la communauté.
-        </p>
-        <a href="#" class="button">Rejoindre le Discord</a>
+        <h2>⚙️ Informations serveur</h2>
+        <p>📍 IP : à venir</p>
+        <p>👥 Slots : à venir</p>
+        <p>🕒 Ouverture : à venir</p>
     </div>
 </section>
 
