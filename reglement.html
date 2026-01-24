@@ -32,7 +32,6 @@ nav {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
-    box-sizing: border-box;
 }
 
 .logo {
@@ -50,54 +49,29 @@ nav {
     padding: 0;
 }
 
-.nav-center li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    white-space: nowrap;
-}
-
-.nav-center li a:hover {
-    color: #00f0ff;
-}
-
-
-nav .logo {
-    font-size: 22px;
-    font-weight: bold;
-    color: #00f0ff;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li a {
+.nav-center a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
 }
 
-nav ul li a:hover {
+.nav-center a:hover {
     color: #00f0ff;
 }
 
 /* CONTENT */
 section {
-    max-width: 900px;
-    margin: 80px auto;
+    max-width: 1000px;
+    margin: 100px auto;
     padding: 0 20px;
 }
 
 .card {
-    background: #11162a;
-    padding: 30px;
-    border-radius: 15px;
-    margin-bottom: 25px;
+    background: linear-gradient(180deg, #121836, #0f142e);
+    padding: 32px;
+    border-radius: 18px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.35);
 }
 
 h1, h2 {
@@ -116,48 +90,40 @@ footer {
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
-    <div class="logo">Astralium RP</div>
-    <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="reglement.html">Règlement</a></li>
-        <li><a href="https://discord.gg/8SVGM7yZW6" target="_blank">Discord</a></li>
-    </ul>
+    <div class="nav-container">
+        <div class="logo">Astralium RP</div>
+        <ul class="nav-center">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="reglement.html">Règlement</a></li>
+            <li><a href="whitelist.html">Whitelist</a></li>
+            <li><a href="https://discord.gg/8SVGM7yZW6" target="_blank">Discord</a></li>
+        </ul>
+    </div>
 </nav>
 
-<!-- CONTENT -->
 <section>
     <div class="card">
         <h1>📜 Règlement Général</h1>
         <p>
-            Le règlement d’Astralium RP a pour but de garantir une expérience
-            roleplay sérieuse, immersive et respectueuse pour tous les joueurs.
+            Le règlement d’Astralium RP vise à garantir une expérience roleplay
+            sérieuse, immersive et respectueuse pour tous les joueurs.
         </p>
     </div>
 
     <div class="card">
         <h2>1️⃣ Respect</h2>
-        <p>
-            Le respect entre joueurs est obligatoire. Tout comportement toxique,
-            insultant ou discriminatoire est interdit.
-        </p>
+        <p>Toute forme d’insulte, discrimination ou comportement toxique est interdite.</p>
     </div>
 
     <div class="card">
         <h2>2️⃣ RolePlay</h2>
-        <p>
-            Le RP doit être constant et crédible. Le NoRP, PowerGaming,
-            MetaGaming et FreeKill sont interdits.
-        </p>
+        <p>Le RP doit être constant et crédible. NoRP, PowerGaming, MetaGaming et FreeKill sont interdits.</p>
     </div>
 
     <div class="card">
         <h2>3️⃣ Sanctions</h2>
-        <p>
-            Toute infraction au règlement peut entraîner un avertissement,
-            un kick, un jail RP ou un bannissement.
-        </p>
+        <p>Toute infraction peut entraîner un avertissement, un jail RP ou un bannissement.</p>
     </div>
 </section>
 
