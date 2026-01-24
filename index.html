@@ -6,8 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-    /* NAVBAR */
-.navbar {
+/* RESET */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0a0f1f;
+    color: #ffffff;
+    padding-top: 70px;
+}
+
+/* NAVBAR */
+nav {
     position: fixed;
     top: 0;
     width: 100%;
@@ -20,56 +29,12 @@
     z-index: 1000;
 }
 
-.nav-logo {
-    font-size: 22px;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.nav-links a {
-    margin-left: 25px;
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 500;
-}
-
-.nav-links a:hover {
-    color: #00f0ff;
-}
-
-/* Décalage du contenu */
-body {
-    padding-top: 70px;
-}
-
-body
-    <nav class="navbar">
-    <div class="nav-logo">Astralium RP</div>
-    <div class="nav-links">
-        <a href="#">Accueil</a>
-        <a href="https://discord.gg/TONLIEN" target="_blank">Discord</a>
-        <a href="#serveur">Serveur</a>
-    </div>
-</nav>
-
-
-/* NAVBAR */
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(10, 15, 31, 0.95);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    z-index: 1000;
-}
 nav .logo {
     font-size: 22px;
     font-weight: bold;
     color: #00f0ff;
 }
+
 nav ul {
     list-style: none;
     display: flex;
@@ -77,11 +42,13 @@ nav ul {
     margin: 0;
     padding: 0;
 }
+
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
 }
+
 nav ul li a:hover {
     color: #00f0ff;
 }
@@ -96,15 +63,18 @@ header {
     text-align: center;
     padding: 0 20px;
 }
+
 header h1 {
     font-size: 52px;
     margin-bottom: 10px;
 }
+
 header p {
     font-size: 20px;
     opacity: 0.9;
 }
-header .buttons a {
+
+.buttons a {
     display: inline-block;
     margin: 15px 10px;
     padding: 14px 28px;
@@ -112,14 +82,17 @@ header .buttons a {
     text-decoration: none;
     font-weight: bold;
 }
+
 .btn-main {
     background: #00f0ff;
     color: #000;
 }
+
 .btn-secondary {
     border: 2px solid #00f0ff;
     color: #00f0ff;
 }
+
 .btn-secondary:hover {
     background: #00f0ff;
     color: #000;
@@ -131,6 +104,7 @@ section {
     margin: 80px auto;
     padding: 0 20px;
 }
+
 .card {
     background: #11162a;
     padding: 30px;
@@ -150,39 +124,45 @@ footer {
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
     <div class="logo">Astralium RP</div>
     <ul>
         <li><a href="#accueil">Accueil</a></li>
-        <li><a href="https://discord.gg/TONLIEN" target="_blank">Discord</a></li>
+        <li><a href="https://discord.gg/8SVGM7yZW6" target="_blank">Discord</a></li>
         <li><a href="#serveur">Serveur</a></li>
     </ul>
 </nav>
 
+<!-- HERO -->
 <header id="accueil">
     <div>
         <h1>Astralium RP</h1>
         <p>Serveur FiveM RolePlay sérieux • Whitelist</p>
         <div class="buttons">
-            <a href="fivem://connect/83.150.218.242:25044" class="btn-main">🎮 Rejoindre le serveur</a>
-            <a href="https://discord.gg/8SVGM7yZW6" class="btn-secondary">💬 Discord</a>
+            <a href="fivem://connect/83.150.218.242:25044" class="btn-main">
+                🎮 Rejoindre le serveur
+            </a>
+            <a href="https://discord.gg/8SVGM7yZW6" class="btn-secondary">
+                💬 Discord
+            </a>
         </div>
     </div>
 </header>
 
+<!-- SERVEUR -->
 <section id="serveur">
     <div class="card">
         <h2>🌌 À propos du serveur</h2>
         <p>
             Astralium RP est un serveur FiveM roleplay sérieux basé sur une
             immersion totale, un RP réaliste et une communauté mature.
-            L’accès se fait via une whitelist afin de garantir la qualité du RP.
         </p>
     </div>
 
     <div class="card">
         <h2>⚙️ Informations serveur</h2>
-        <p>📍 IP : à venir</p>
+        <p>📍 IP : 83.150.218.242:25044</p>
         <p>👥 Slots : à venir</p>
         <p>🕒 Ouverture : à venir</p>
     </div>
