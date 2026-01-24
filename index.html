@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-/* RESET */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -30,10 +29,9 @@ nav {
     height: 70px;
     margin: 0 auto;
     padding: 0 20px;
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
     align-items: center;
-    box-sizing: border-box;
+    justify-content: space-between;
 }
 
 .logo {
@@ -42,9 +40,7 @@ nav {
     color: #00f0ff;
 }
 
-/* MENU CENTRÉ */
 .nav-center {
-    justify-self: center;
     list-style: none;
     display: flex;
     gap: 25px;
@@ -52,15 +48,20 @@ nav {
     padding: 0;
 }
 
-.nav-center li a {
+.nav-center a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    white-space: nowrap;
 }
 
-.nav-center li a:hover {
+.nav-center a:hover {
     color: #00f0ff;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
 }
 
 /* HERO */
@@ -73,24 +74,13 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 20px;
 }
 
 header h1 {
     font-size: 56px;
-    margin-bottom: 12px;
-    letter-spacing: 1px;
     text-shadow: 0 0 20px rgba(0,240,255,0.25);
 }
 
-header p {
-    font-size: 20px;
-    opacity: 0.9;
-    max-width: 700px;
-    margin: 0 auto 20px;
-}
-
-/* BUTTONS */
 .buttons a {
     display: inline-block;
     margin: 15px 10px;
@@ -98,23 +88,16 @@ header p {
     border-radius: 12px;
     text-decoration: none;
     font-weight: bold;
-    transition: transform .2s ease, box-shadow .2s ease;
 }
 
 .btn-main {
     background: #00f0ff;
     color: #000;
-    box-shadow: 0 0 20px rgba(0,240,255,0.35);
 }
 
 .btn-secondary {
     border: 2px solid #00f0ff;
     color: #00f0ff;
-}
-
-.buttons a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(0,240,255,0.35);
 }
 
 /* SECTIONS */
@@ -129,32 +112,40 @@ section {
     padding: 32px;
     border-radius: 18px;
     margin-bottom: 30px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.35);
-    transition: transform .2s ease, box-shadow .2s ease;
 }
 
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.45);
-}
+/* MOBILE */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
 
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 30px;
-    font-size: 14px;
-    opacity: 0.6;
+    .nav-center {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #0a0f1f;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        padding: 20px 0;
+    }
+
+    .nav-center.active {
+        display: flex;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
     <div class="nav-container">
         <div class="logo">Astralium RP</div>
-        <ul class="nav-center">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="nav-center" id="navMenu">
             <li><a href="index.html">Accueil</a></li>
             <li><a href="reglement.html">Règlement</a></li>
             <li><a href="whitelist.html">Whitelist</a></li>
@@ -163,44 +154,22 @@ footer {
     </div>
 </nav>
 
-<!-- HERO -->
-<header id="accueil">
+<header>
     <div>
         <h1>Astralium RP</h1>
         <p>Serveur FiveM RolePlay sérieux • Whitelist</p>
         <div class="buttons">
-            <a href="fivem://connect/83.150.218.242:25044" class="btn-main">
-                🎮 Rejoindre le serveur
-            </a>
-            <a href="https://discord.gg/8SVGM7yZW6" class="btn-secondary">
-                💬 Discord
-            </a>
+            <a href="fivem://connect/83.150.218.242:25044" class="btn-main">🎮 Rejoindre</a>
+            <a href="https://discord.gg/8SVGM7yZW6" class="btn-secondary">💬 Discord</a>
         </div>
     </div>
 </header>
 
-<!-- SERVEUR -->
-<section id="serveur">
-    <div class="card">
-        <h2>🌌 À propos du serveur</h2>
-        <p>
-            Astralium RP est un serveur FiveM roleplay sérieux basé sur une
-            immersion totale, un RP réaliste et une communauté mature.
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>⚙️ Informations serveur</h2>
-        <p>📍 IP : 83.150.218.242:25044</p>
-        <p>👥 Slots : à venir</p>
-        <p>🕒 Ouverture : à venir</p>
-    </div>
-</section>
-
-<footer>
-    © 2026 Astralium RP – Tous droits réservés
-</footer>
+<script>
+function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
-
