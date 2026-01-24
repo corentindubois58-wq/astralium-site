@@ -17,23 +17,52 @@ body {
 
 /* NAVBAR */
 nav {
+nav {
     position: fixed;
     top: 0;
     width: 100%;
     height: 70px;
     background: rgba(10, 15, 31, 0.95);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
     z-index: 1000;
 }
 
-nav .logo {
+.nav-container {
+    max-width: 1200px;
+    height: 70px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.logo {
     font-size: 22px;
     font-weight: bold;
     color: #00f0ff;
 }
+
+.nav-center {
+    justify-self: center;
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-center li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.nav-center li a:hover {
+    color: #00f0ff;
+}
+
 
 nav ul {
     list-style: none;
@@ -126,15 +155,16 @@ footer {
 
 <!-- NAVBAR -->
 <nav>
-    <div class="logo">Astralium RP</div>
-    <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="reglement.html">Règlement</a></li>
-        <li><a href="https://discord.gg/8SVGM7yZW6" target="_blank">Discord</a></li>
-        <li><a href="#serveur">Serveur</a></li>
-    </ul>
+    <div class="nav-container">
+        <div class="logo">Astralium RP</div>
+        <ul class="nav-center">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="reglement.html">Règlement</a></li>
+            <li><a href="whitelist.html">Whitelist</a></li>
+            <li><a href="https://discord.gg/8SVGM7yZW6" target="_blank">Discord</a></li>
+        </ul>
+    </div>
 </nav>
-
 
 <!-- HERO -->
 <header id="accueil">
