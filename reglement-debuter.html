@@ -65,8 +65,6 @@ nav {
 }
 
 .sidebar h3 {
-    margin-top: 0;
-    margin-bottom: 15px;
     color: #00f0ff;
 }
 
@@ -102,16 +100,37 @@ nav {
 
 .content h1 {
     color: #00f0ff;
+    margin-top: 0;
 }
 
-.step {
-    margin-top: 25px;
-    padding-left: 15px;
-    border-left: 3px solid #00f0ff;
+/* QUICK ACCESS */
+.quick-access {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 15px;
+    margin: 30px 0;
 }
 
-.step h2 {
-    margin-bottom: 8px;
+.quick-card {
+    background: rgba(0,0,0,.25);
+    padding: 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(0,240,255,.15);
+}
+
+.quick-card h4 {
+    margin: 0 0 8px;
+    color: #00f0ff;
+}
+
+/* SECTIONS */
+.section {
+    margin-top: 40px;
+}
+
+.section h2 {
+    color: #00f0ff;
+    margin-bottom: 10px;
 }
 </style>
 </head>
@@ -143,56 +162,73 @@ nav {
         <a href="reglement-debuter.html" class="active">🚀 Débuter</a>
 
         <hr>
-
         <a href="index.html">⬅ Retour accueil</a>
     </aside>
 
     <!-- CONTENT -->
     <main class="content">
-        <h1>Débuter sur Astralium RP</h1>
 
+        <h1>🚀 Débuter sur Astralium RP</h1>
         <p>
             Cette section est destinée aux nouveaux joueurs afin de leur
-            permettre de commencer leur aventure RP dans de bonnes conditions.
+            permettre de comprendre rapidement le fonctionnement du serveur
+            et de commencer un RP cohérent.
         </p>
 
-        <div class="step">
-            <h2>1. Connexion au serveur</h2>
+        <!-- CARTES -->
+        <div class="quick-access">
+            <div class="quick-card">
+                <h4>🎮 Connexion</h4>
+                <p>Rejoindre le serveur et accéder à la ville.</p>
+            </div>
+            <div class="quick-card">
+                <h4>🧍 Personnage</h4>
+                <p>Créer un personnage crédible et réaliste.</p>
+            </div>
+            <div class="quick-card">
+                <h4>⌨️ Touches & HUD</h4>
+                <p>Configurer ton interface et tes raccourcis.</p>
+            </div>
+            <div class="quick-card">
+                <h4>💼 Activités</h4>
+                <p>Trouver un emploi ou développer ton RP.</p>
+            </div>
+            <div class="quick-card">
+                <h4>🆘 Support</h4>
+                <p>Contacter le staff en cas de problème.</p>
+            </div>
+        </div>
+
+        <!-- SECTIONS -->
+        <div class="section">
+            <h2>🔌 Connexion au serveur</h2>
             <p>
-                Connecte-toi via FiveM en utilisant la liste des serveurs
-                ou l’adresse fournie par le staff.
+                Tu peux rejoindre Astralium RP via la liste FiveM
+                ou en utilisant l’adresse communiquée par le staff.
             </p>
         </div>
 
-        <div class="step">
-            <h2>2. Création de personnage</h2>
+        <div class="section">
+            <h2>🧍 Création de personnage</h2>
             <p>
-                Ton personnage doit être cohérent, crédible et respecter
-                l’univers RP du serveur.
+                Ton personnage doit respecter un minimum de cohérence :
+                nom réaliste, comportement RP et respect des règles HRP.
             </p>
         </div>
 
-        <div class="step">
-            <h2>3. Découverte de la ville</h2>
+        <div class="section">
+            <h2>💼 Trouver une activité</h2>
             <p>
-                Prends le temps d’explorer, d’interagir avec les autres joueurs
-                et de comprendre le fonctionnement de la ville.
+                Tu peux commencer par un métier légal, explorer la ville
+                ou créer des interactions RP avec d’autres joueurs.
             </p>
         </div>
 
-        <div class="step">
-            <h2>4. Débuter son RP</h2>
+        <div class="section">
+            <h2>🆘 Aide & problèmes</h2>
             <p>
-                Trouve une activité légale, développe ton histoire
-                et privilégie toujours le fair-play.
-            </p>
-        </div>
-
-        <div class="step">
-            <h2>5. Aide & support</h2>
-            <p>
-                En cas de problème, contacte le staff via les outils RP
-                ou le Discord officiel.
+                En cas de souci technique ou RP, contacte le staff via
+                les outils prévus ou le Discord officiel.
             </p>
         </div>
 
