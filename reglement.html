@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Règlements | Astralium RP</title>
+<title>Règlement | Astralium RP</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -20,131 +20,158 @@ nav {
     top: 0;
     width: 100%;
     height: 70px;
-    background: rgba(10, 15, 31, 0.95);
+    background: rgba(10,15,31,.95);
     z-index: 1000;
 }
 
 .nav-container {
     max-width: 1200px;
     height: 70px;
-    margin: 0 auto;
+    margin: auto;
     padding: 0 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .logo {
-    font-size: 22px;
-    font-weight: bold;
     color: #00f0ff;
-}
-
-.nav-center {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-center a {
-    color: #ffffff;
-    text-decoration: none;
     font-weight: bold;
+    font-size: 22px;
 }
 
-/* HERO */
-.hero {
-    height: 40vh;
-    background:
-        linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-        linear-gradient(135deg, #001b3a, #0a0f1f);
+/* LAYOUT */
+.wrapper {
+    max-width: 1200px;
+    margin: 40px auto;
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero h1 {
-    font-size: 48px;
-    letter-spacing: 3px;
-}
-
-/* GRID */
-.container {
-    max-width: 1100px;
-    margin: 60px auto;
+    gap: 30px;
     padding: 0 20px;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-    gap: 25px;
+/* SIDEBAR */
+.sidebar {
+    width: 260px;
+    background: linear-gradient(180deg,#121836,#0f142e);
+    border-radius: 18px;
+    padding: 20px;
 }
 
-.card {
-    background: linear-gradient(180deg, #121836, #0f142e);
-    padding: 26px;
-    border-radius: 16px;
-    border-left: 4px solid #00f0ff;
-    cursor: pointer;
-    transition: .2s;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(0,0,0,.5);
-}
-
-.card h2 {
-    margin: 0 0 10px;
+.sidebar h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
     color: #00f0ff;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    margin-bottom: 6px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+    background: rgba(0,240,255,0.15);
+    color: #00f0ff;
+}
+
+.sidebar hr {
+    border: none;
+    height: 1px;
+    background: rgba(255,255,255,.1);
+    margin: 15px 0;
+}
+
+/* CONTENT */
+.content {
+    flex: 1;
+    background: linear-gradient(180deg,#121836,#0f142e);
+    border-radius: 18px;
+    padding: 30px;
+}
+
+.breadcrumb {
+    font-size: 14px;
+    opacity: .7;
+    margin-bottom: 20px;
+}
+
+.content h1 {
+    color: #00f0ff;
+    margin-top: 0;
+}
+
+.content h2 {
+    margin-top: 30px;
+    color: #ffffff;
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
     <div class="nav-container">
         <div class="logo">Astralium RP</div>
-        <ul class="nav-center">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="reglement.html">Règlement</a></li>
-            <li><a href="whitelist.html">Whitelist</a></li>
-            <li><a href="#">Discord</a></li>
-        </ul>
     </div>
 </nav>
 
-<section class="hero">
-    <h1>RÈGLEMENTS</h1>
-</section>
+<!-- PAGE -->
+<div class="wrapper">
 
-<section class="container">
-    <div class="grid">
-        <a class="card" href="reglement-hrp.html">
-            <h2>📘 Règlement HRP</h2>
-            <p>Comportement hors RP, respect et communication.</p>
-        </a>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h3>📜 Règlement</h3>
 
-        <a class="card" href="reglement-global.html">
-            <h2>🌍 Règlement Global</h2>
-            <p>Règles générales applicables à tous.</p>
-        </a>
+        <a href="reglement.html" class="active">📘 HRP</a>
+        <a href="reglement-global.html">🌍 Global</a>
+        <a href="reglement-legal.html">⚖️ RP Légal</a>
+        <a href="reglement-illegal.html">🔪 RP Illégal</a>
 
-        <a class="card" href="reglement-legal.html">
-            <h2>⚖️ RP Légal</h2>
-            <p>Forces de l’ordre, EMS, entreprises.</p>
-        </a>
+        <hr>
 
-        <a class="card" href="reglement-illegal.html">
-            <h2>🔪 RP Illégal</h2>
-            <p>Organisations, limites et sanctions.</p>
-        </a>
-    </div>
-</section>
+        <a href="index.html">⬅ Retour accueil</a>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+        <div class="breadcrumb">
+            Accueil > Règlement > HRP
+        </div>
+
+        <h1>Règlement HRP</h1>
+
+        <p>
+            Le règlement HRP encadre le comportement des joueurs en dehors du roleplay.
+            Le respect, la communication et la maturité sont obligatoires.
+        </p>
+
+        <h2>1. Respect</h2>
+        <p>
+            Aucun propos haineux, insultant, discriminatoire ou provocateur
+            n’est toléré sur Astralium RP.
+        </p>
+
+        <h2>2. Comportement</h2>
+        <p>
+            Tout abus, troll, provocation volontaire ou comportement toxique
+            est passible de sanction.
+        </p>
+
+        <h2>3. Staff</h2>
+        <p>
+            Les décisions du staff doivent être respectées.
+            Toute contestation se fait calmement et hors RP.
+        </p>
+    </main>
+
+</div>
 
 </body>
 </html>
