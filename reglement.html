@@ -54,75 +54,52 @@ nav {
     font-weight: bold;
 }
 
-.nav-center a:hover {
-    color: #00f0ff;
-}
-
-/* HERO REGLEMENT */
-.reglement-hero {
+/* HERO */
+.hero {
     height: 40vh;
     background:
-        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-        url("https://images.unsplash.com/photo-1604014237800-1c9102c219da?q=80&w=1600&auto=format&fit=crop");
-    background-size: cover;
-    background-position: center;
+        linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+        linear-gradient(135deg, #001b3a, #0a0f1f);
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
 }
 
-.reglement-hero h1 {
+.hero h1 {
     font-size: 48px;
     letter-spacing: 3px;
 }
 
-/* CONTAINER */
+/* GRID */
 .container {
     max-width: 1100px;
     margin: 60px auto;
     padding: 0 20px;
 }
 
-/* GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     gap: 25px;
 }
 
-/* CARD */
 .card {
     background: linear-gradient(180deg, #121836, #0f142e);
     padding: 26px;
     border-radius: 16px;
-    cursor: pointer;
-    transition: transform .2s ease, box-shadow .2s ease;
     border-left: 4px solid #00f0ff;
+    cursor: pointer;
+    transition: .2s;
 }
 
 .card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    box-shadow: 0 20px 40px rgba(0,0,0,.5);
 }
 
 .card h2 {
     margin: 0 0 10px;
     color: #00f0ff;
-}
-
-.card p {
-    margin: 0;
-    opacity: 0.85;
-    font-size: 15px;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 30px;
-    font-size: 14px;
-    opacity: 0.6;
 }
 </style>
 </head>
@@ -136,46 +113,38 @@ footer {
             <li><a href="index.html">Accueil</a></li>
             <li><a href="reglement.html">Règlement</a></li>
             <li><a href="whitelist.html">Whitelist</a></li>
-            <li><a href="https://discord.gg/8SVGM7yZW6" target="_blank">Discord</a></li>
+            <li><a href="#">Discord</a></li>
         </ul>
     </div>
 </nav>
 
-<!-- HERO -->
-<section class="reglement-hero">
+<section class="hero">
     <h1>RÈGLEMENTS</h1>
 </section>
 
-<!-- CONTENT -->
 <section class="container">
     <div class="grid">
-
-        <div class="card">
+        <a class="card" href="reglement-hrp.html">
             <h2>📘 Règlement HRP</h2>
-            <p>Règles hors roleplay : respect, communication, comportement général.</p>
-        </div>
+            <p>Comportement hors RP, respect et communication.</p>
+        </a>
 
-        <div class="card">
+        <a class="card" href="reglement-global.html">
             <h2>🌍 Règlement Global</h2>
-            <p>Règles générales applicables à tous les joueurs sur le serveur.</p>
-        </div>
+            <p>Règles générales applicables à tous.</p>
+        </a>
 
-        <div class="card">
+        <a class="card" href="reglement-legal.html">
             <h2>⚖️ RP Légal</h2>
-            <p>Forces de l’ordre, services publics, entreprises légales.</p>
-        </div>
+            <p>Forces de l’ordre, EMS, entreprises.</p>
+        </a>
 
-        <div class="card">
+        <a class="card" href="reglement-illegal.html">
             <h2>🔪 RP Illégal</h2>
-            <p>Activités criminelles, organisations, limites RP illégal.</p>
-        </div>
-
+            <p>Organisations, limites et sanctions.</p>
+        </a>
     </div>
 </section>
-
-<footer>
-    © 2026 Astralium RP – Tous droits réservés
-</footer>
 
 </body>
 </html>
