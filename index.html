@@ -114,6 +114,17 @@ section {
     margin-bottom: 30px;
 }
 
+/* STATUT */
+.status-online {
+    color: #2eff7b;
+    font-weight: bold;
+}
+
+.status-offline {
+    color: #ff4c4c;
+    font-weight: bold;
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
     .menu-toggle {
@@ -137,43 +148,8 @@ section {
     }
 }
 </style>
-    .status-online {
-    color: #2eff7b;
-    font-weight: bold;
-}
-
-.status-offline {
-    color: #ff4c4c;
-    font-weight: bold;
-}
-
 </head>
 
-<script>
-const SERVER_IP = "83.150.218.242:25044";
-
-fetch(`https://servers-frontend.fivem.net/api/servers/single/${SERVER_IP}`)
-    .then(res => res.json())
-    .then(data => {
-        const statusText = document.getElementById("status-text");
-
-        if (data && data.Data) {
-            const players = data.Data.clients;
-            const maxPlayers = data.Data.sv_maxclients;
-
-            statusText.innerHTML =
-                `🟢 <span class="status-online">EN LIGNE</span><br>
-                 👥 ${players} / ${maxPlayers} joueurs connectés`;
-        } else {
-            throw new Error("Serveur hors ligne");
-        }
-    })
-    .catch(() => {
-        const statusText = document.getElementById("status-text");
-        statusText.innerHTML =
-            `🔴 <span class="status-offline">HORS LIGNE</span>`;
-    });
-</script>
 <body>
 
 <nav>
@@ -200,17 +176,7 @@ fetch(`https://servers-frontend.fivem.net/api/servers/single/${SERVER_IP}`)
     </div>
 </header>
 
-<script>
-function toggleMenu() {
-    document.getElementById("navMenu").classList.toggle("active");
-}
-</script>
-/* FIVEM */
+<section>
     <div class="card" id="server-status">
-    <h2>🖥️ Statut du serveur</h2>
-    <p id="status-text">⏳ Chargement du statut...</p>
-</div>
+        <
 
-    
-</body>
-</html>
