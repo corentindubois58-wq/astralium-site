@@ -32,7 +32,6 @@ nav {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
-    box-sizing: border-box;
 }
 
 .logo {
@@ -50,124 +49,88 @@ nav {
     padding: 0;
 }
 
-.nav-center li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    white-space: nowrap;
-}
-
-.nav-center li a:hover {
-    color: #00f0ff;
-}
-
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li a {
+.nav-center a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
 }
 
-nav ul li a:hover {
+.nav-center a:hover {
     color: #00f0ff;
 }
 
 /* CONTENT */
 section {
-    max-width: 900px;
-    margin: 80px auto;
+    max-width: 1000px;
+    margin: 100px auto;
     padding: 0 20px;
 }
 
 .card {
-    background: #11162a;
-    padding: 30px;
-    border-radius: 15px;
-    margin-bottom: 25px;
+    background: linear-gradient(180deg, #121836, #0f142e);
+    padding: 32px;
+    border-radius: 18px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.35);
 }
 
 h1, h2 {
     color: #00f0ff;
 }
 
-/* BUTTON */
 .button {
     display: inline-block;
     margin-top: 15px;
-    padding: 14px 28px;
+    padding: 14px 30px;
     background: #00f0ff;
     color: #000;
+    border-radius: 12px;
     text-decoration: none;
-    border-radius: 10px;
     font-weight: bold;
-}
-
-.button:hover {
-    background: #00c8d4;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 30px;
-    font-size: 14px;
-    opacity: 0.6;
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
-    <div class="logo">Astralium RP</div>
-    <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="reglement.html">Règlement</a></li>
-        <li><a href="whitelist.html">Whitelist</a></li>
-        <li><a href="https://discord.gg/8SVGM7yZW6" target="_blank">Discord</a></li>
-    </ul>
+    <div class="nav-container">
+        <div class="logo">Astralium RP</div>
+        <ul class="nav-center">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="reglement.html">Règlement</a></li>
+            <li><a href="whitelist.html">Whitelist</a></li>
+            <li><a href="https://discord.gg/8SVGM7yZW6" target="_blank">Discord</a></li>
+        </ul>
+    </div>
 </nav>
 
-<!-- CONTENT -->
 <section>
     <div class="card">
         <h1>📝 Procédure Whitelist</h1>
         <p>
             L’accès au serveur Astralium RP se fait uniquement via une whitelist
-            afin de garantir un niveau de roleplay sérieux et cohérent.
+            afin de garantir un RP sérieux et cohérent.
         </p>
     </div>
 
     <div class="card">
-        <h2>📌 Conditions requises</h2>
-        <p>✔️ Avoir un micro fonctionnel</p>
-        <p>✔️ Avoir plus de 16 ans</p>
-        <p>✔️ Connaître les bases du RP</p>
-        <p>✔️ Respecter le règlement</p>
+        <h2>📌 Conditions</h2>
+        <p>✔️ Micro fonctionnel</p>
+        <p>✔️ Minimum 16 ans</p>
+        <p>✔️ Connaissance des bases RP</p>
     </div>
 
     <div class="card">
-        <h2>📄 Étapes de la Whitelist</h2>
-        <p>1️⃣ Rejoindre le Discord officiel</p>
-        <p>2️⃣ Lire et accepter le règlement</p>
-        <p>3️⃣ Remplir le formulaire Whitelist</p>
-        <p>4️⃣ Passer un entretien vocal</p>
+        <h2>📄 Étapes</h2>
+        <p>1️⃣ Rejoindre le Discord</p>
+        <p>2️⃣ Lire le règlement</p>
+        <p>3️⃣ Remplir le formulaire</p>
+        <p>4️⃣ Entretien vocal</p>
     </div>
 
     <div class="card">
-        <h2>🚀 Accès au formulaire</h2>
-        <p>
-            Le formulaire de whitelist est disponible sur notre Discord officiel.
-        </p>
+        <h2>🚀 Accès Whitelist</h2>
         <a href="https://discord.gg/8SVGM7yZW6" target="_blank" class="button">
             Rejoindre le Discord
         </a>
@@ -180,4 +143,3 @@ footer {
 
 </body>
 </html>
-
