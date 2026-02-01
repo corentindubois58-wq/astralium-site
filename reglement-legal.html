@@ -2,205 +2,35 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Règlement RP Légal | Astralium RP</title>
+<title>RP Légal | Astralium RP</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0a0f1f;
-    color: #ffffff;
-    padding-top: 70px;
-}
-
-/* NAVBAR */
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 70px;
-    background: rgba(10,15,31,.95);
-    z-index: 1000;
-}
-
-.nav-container {
-    max-width: 1200px;
-    height: 70px;
-    margin: auto;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-    color: #00f0ff;
-    font-weight: bold;
-    font-size: 22px;
-}
-
-.nav-links a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    margin-left: 20px;
-}
-
-.nav-links a:hover {
-    color: #00f0ff;
-}
-
-/* LAYOUT */
-.wrapper {
-    max-width: 1200px;
-    margin: 40px auto;
-    display: flex;
-    gap: 30px;
-    padding: 0 20px;
-}
-
-/* SIDEBAR */
-.sidebar {
-    width: 260px;
-    background: linear-gradient(180deg,#121836,#0f142e);
-    border-radius: 18px;
-    padding: 20px;
-}
-
-.sidebar h3 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    color: #00f0ff;
-}
-
-.sidebar a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px;
-    margin-bottom: 6px;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 10px;
-    font-size: 15px;
-}
-
-.sidebar a.active,
-.sidebar a:hover {
-    background: rgba(0,240,255,0.15);
-    color: #00f0ff;
-}
-
-.sidebar hr {
-    border: none;
-    height: 1px;
-    background: rgba(255,255,255,.1);
-    margin: 15px 0;
-}
-
-/* CONTENT */
-.content {
-    flex: 1;
-    background: linear-gradient(180deg,#121836,#0f142e);
-    border-radius: 18px;
-    padding: 30px;
-}
-
-.breadcrumb {
-    font-size: 14px;
-    opacity: .7;
-    margin-bottom: 20px;
-}
-
-.content h1 {
-    color: #00f0ff;
-    margin-top: 0;
-}
-
-.content h2 {
-    margin-top: 30px;
-}
-</style>
+<style>/* IDENTIQUE */</style>
 </head>
-
 <body>
+<header>
+<h1>⚖️ RP Légal</h1>
+<p>Métiers et activités légales</p>
+<div class="search">
+<input type="text" id="searchInput" placeholder="🔍 Rechercher..." onkeyup="searchAll()">
+</div>
+</header>
 
-<!-- NAVBAR -->
-<nav>
-    <div class="nav-container">
-        <div class="logo">Astralium RP</div>
-        <div class="nav-links">
-            <a href="index.html">Accueil</a>
-            <a href="reglement.html">Règlement</a>
-            <a href="whitelist.html">Whitelist</a>
-            <a href="https://discord.gg/8SVGM7yZW6" target="_blank">Discord</a>
-        </div>
-    </div>
-</nav>
-
-<!-- PAGE -->
 <div class="wrapper">
-
-    <!-- SIDEBAR -->
-    <<aside class="sidebar">
-
-    <input type="text" placeholder="🔍 Rechercher dans le règlement...">
-
-    <h3>📜 Règlement</h3>
-
-    <a href="reglement-debuter.html">🚀 Débuter</a>
-    <a href="reglement.html">📘 HRP</a>
-    <a href="reglement-global.html">🌍 Global</a>
-    <a href="reglement-legal.html" class="active>⚖️ RP Légal</a>
-    <a href="reglement-illegal.html">🔪 RP Illégal</a>
-
-    <hr>
-
-    <a href="index.html">⬅ Retour accueil</a>
-
-</aside>
-
-
-    <!-- CONTENT -->
-    <main class="content">
-        <div class="breadcrumb">
-            Accueil > Règlement > RP Légal
-        </div>
-
-        <h1>Règlement RP Légal</h1>
-
-        <p>
-            Le règlement RP Légal encadre les métiers et activités légales
-            du serveur afin de garantir un RP cohérent, sérieux et réaliste.
-        </p>
-
-        <h2>1. Métiers légaux</h2>
-        <p>
-            Les métiers légaux (LSPD, EMS, mécaniciens, entreprises, etc.)
-            doivent être joués de manière réaliste et sérieuse.
-        </p>
-
-        <h2>2. Forces de l’ordre</h2>
-        <p>
-            Les forces de l’ordre doivent respecter la hiérarchie,
-            les procédures RP et les règles de proportionnalité.
-        </p>
-
-        <h2>3. Services publics</h2>
-        <p>
-            Les EMS et autres services publics doivent prioriser
-            le RP médical et l’assistance RP avant toute autre action.
-        </p>
-
-        <h2>4. Abus de pouvoir</h2>
-        <p>
-            Tout abus de pouvoir ou utilisation abusive d’un métier légal
-            est strictement interdit et sanctionnable.
-        </p>
-    </main>
-
+<div class="sidebar">
+<a href="reglement-debuter.html">🚀 Débuter</a>
+<a href="reglement.html">📘 HRP</a>
+<a href="reglement-global.html">🌍 Global</a>
+<a href="reglement-legal.html" class="active">⚖️ RP Légal</a>
+<a href="reglement-illegal.html">🔪 RP Illégal</a>
+<hr>
+<a href="index.html">⬅ Accueil</a>
 </div>
 
+<div class="content">
+<div class="card"><h2>🚓 Forces de l’ordre</h2><p>Le respect de la hiérarchie est obligatoire.</p></div>
+<div class="card"><h2>🏥 Services publics</h2><p>Le RP doit être réaliste et cohérent.</p></div>
+<div class="card"><h2>🏢 Entreprises</h2><p>Les entreprises doivent respecter la loi RP.</p></div>
+</div>
+</div>
 </body>
 </html>
