@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Règlement | Astralium RP</title>
+<title>Règlement HRP | Astralium RP</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -110,7 +110,7 @@ nav {
 .breadcrumb {
     font-size: 14px;
     opacity: .7;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .content h1 {
@@ -120,6 +120,45 @@ nav {
 
 .content h2 {
     margin-top: 30px;
+}
+
+/* GLOBAL SEARCH */
+.global-search {
+    margin: 20px 0 30px;
+}
+
+.global-search input {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,240,255,.25);
+    background: rgba(0,0,0,.25);
+    color: #ffffff;
+    font-size: 15px;
+}
+
+#globalResults {
+    margin-top: 15px;
+}
+
+.result-item {
+    background: rgba(0,0,0,.25);
+    border: 1px solid rgba(0,240,255,.15);
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 10px;
+}
+
+.result-item a {
+    color: #00f0ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.result-item p {
+    margin: 6px 0 0;
+    font-size: 14px;
+    opacity: .85;
 }
 </style>
 </head>
@@ -139,20 +178,17 @@ nav {
     </div>
 </nav>
 
-<!-- PAGE -->
 <div class="wrapper">
 
     <!-- SIDEBAR -->
     <aside class="sidebar">
         <h3>📜 Règlement</h3>
 
-        <a href="reglement-debuter.html" class="active">🚀 Débuter</a>
+        <a href="reglement-debuter.html">🚀 Débuter</a>
         <a href="reglement.html" class="active">📘 HRP</a>
         <a href="reglement-global.html">🌍 Global</a>
         <a href="reglement-legal.html">⚖️ RP Légal</a>
         <a href="reglement-illegal.html">🔪 RP Illégal</a>
-        
-
 
         <hr>
 
@@ -166,6 +202,16 @@ nav {
         </div>
 
         <h1>Règlement HRP</h1>
+
+        <!-- GLOBAL SEARCH -->
+        <div class="global-search">
+            <input
+                type="text"
+                id="globalSearchInput"
+                placeholder="🔍 Recherche globale dans tous les règlements..."
+                onkeyup="globalSearch()">
+            <div id="globalResults"></div>
+        </div>
 
         <p>
             Le règlement HRP encadre le comportement des joueurs en dehors du roleplay.
@@ -192,6 +238,53 @@ nav {
     </main>
 
 </div>
+
+<script>
+const reglementPages = [
+    { file: "reglement.html", label: "HRP" },
+    { file: "reglement-global.html", label: "Global" },
+    { file: "reglement-legal.html", label: "RP Légal" },
+    { file: "reglement-illegal.html", label: "RP Illégal" },
+    { file: "reglement-debuter.html", label: "Débuter" }
+];
+
+async function globalSearch() {
+    const query = document.getElementById("globalSearchInput").value.toLowerCase();
+    const resultsBox = document.getElementById("globalResults");
+
+    resultsBox.innerHTML = "";
+    if (query.length < 3) return;
+
+    for (const page of reglementPages) {
+        try {
+            const res = await fetch(page.file);
+            const text = await res.text();
+
+            const cleanText = text
+                .replace(/<[^>]*>/g, " ")
+                .replace(/\s+/g, " ");
+
+            const index = cleanText.toLowerCase().indexOf(query);
+
+            if (index !== -1) {
+                const excerpt = cleanText.substring(
+                    Math.max(0, index - 60),
+                    index + 120
+                );
+
+                resultsBox.innerHTML += `
+                    <div class="result-item">
+                        <a href="${page.file}">📄 ${page.label}</a>
+                        <p>…${excerpt}…</p>
+                    </div>
+                `;
+            }
+        } catch (e) {
+            console.error("Erreur recherche :", page.file);
+        }
+    }
+}
+</script>
 
 </body>
 </html>
