@@ -2,9 +2,8 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Débuter | Astralium RP</title>
+<title>Règlement HRP | Astralium RP</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <style>
 body{margin:0;font-family:Arial;background:#0a0f1f;color:#fff}
 header{padding:25px;text-align:center;background:linear-gradient(135deg,#001b3a,#0a0f1f)}
@@ -25,9 +24,8 @@ header h1{color:#00f0ff}
 <body>
 
 <header>
-<h1>🚀 Débuter sur Astralium RP</h1>
-<p>Guide complet pour bien commencer</p>
-
+<h1>📘 Règlement HRP</h1>
+<p>Comportement hors roleplay</p>
 <div class="search">
 <input type="text" id="searchInput" placeholder="🔍 Rechercher dans tous les règlements..." onkeyup="searchAll()">
 </div>
@@ -36,8 +34,8 @@ header h1{color:#00f0ff}
 <div class="wrapper">
 
 <div class="sidebar">
-<a href="reglement-debuter.html" class="active">🚀 Débuter</a>
-<a href="reglement.html">📘 HRP</a>
+<a href="reglement-debuter.html">🚀 Débuter</a>
+<a href="reglement.html" class="active">📘 HRP</a>
 <a href="reglement-global.html">🌍 Global</a>
 <a href="reglement-legal.html">⚖️ RP Légal</a>
 <a href="reglement-illegal.html">🔪 RP Illégal</a>
@@ -48,23 +46,18 @@ header h1{color:#00f0ff}
 <div class="content" id="content">
 
 <div class="card">
-<h2>🔑 Connexion</h2>
-<p>Rejoins Astralium RP via FiveM et assure-toi d’avoir Discord ouvert.</p>
+<h2>🤝 Respect</h2>
+<p>Tout propos insultant, haineux ou discriminatoire est strictement interdit.</p>
 </div>
 
 <div class="card">
-<h2>🧍 Création du personnage</h2>
-<p>Nom réaliste, comportement cohérent et respect du RP.</p>
+<h2>⚠️ Comportement</h2>
+<p>Le troll, le harcèlement ou le non-respect du staff sont sanctionnés.</p>
 </div>
 
 <div class="card">
-<h2>💼 Trouver une activité</h2>
-<p>Commence par un métier légal ou explore la ville.</p>
-</div>
-
-<div class="card">
-<h2>🆘 Aide & support</h2>
-<p>En cas de problème, contacte le staff via Discord.</p>
+<h2>🛡️ Staff</h2>
+<p>Les décisions du staff sont finales et doivent être respectées.</p>
 </div>
 
 <div id="results"></div>
@@ -79,23 +72,17 @@ const files=[
 {file:"reglement-legal.html",label:"RP Légal"},
 {file:"reglement-illegal.html",label:"RP Illégal"}
 ];
-
 async function searchAll(){
 const q=document.getElementById("searchInput").value.toLowerCase();
 const box=document.getElementById("results");
 box.innerHTML="";
 if(q.length<3)return;
-
 for(const f of files){
 const res=await fetch(f.file);
 const txt=(await res.text()).replace(/<[^>]*>/g," ");
 const i=txt.toLowerCase().indexOf(q);
 if(i!==-1){
-box.innerHTML+=`
-<div class="result">
-<a href="${f.file}">📄 ${f.label}</a>
-<p>…${txt.substring(i-40,i+120)}…</p>
-</div>`;
+box.innerHTML+=`<div class="result"><a href="${f.file}">📄 ${f.label}</a><p>…${txt.substring(i-40,i+120)}…</p></div>`;
 }
 }
 }
