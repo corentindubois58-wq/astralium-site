@@ -4,203 +4,36 @@
 <meta charset="UTF-8">
 <title>Règlement Global | Astralium RP</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<link rel="stylesheet" href="">
 <style>
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0a0f1f;
-    color: #ffffff;
-    padding-top: 70px;
-}
-
-/* NAVBAR */
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 70px;
-    background: rgba(10,15,31,.95);
-    z-index: 1000;
-}
-
-.nav-container {
-    max-width: 1200px;
-    height: 70px;
-    margin: auto;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-    color: #00f0ff;
-    font-weight: bold;
-    font-size: 22px;
-}
-
-.nav-links a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    margin-left: 20px;
-}
-
-.nav-links a:hover {
-    color: #00f0ff;
-}
-
-/* LAYOUT */
-.wrapper {
-    max-width: 1200px;
-    margin: 40px auto;
-    display: flex;
-    gap: 30px;
-    padding: 0 20px;
-}
-
-/* SIDEBAR */
-.sidebar {
-    width: 260px;
-    background: linear-gradient(180deg,#121836,#0f142e);
-    border-radius: 18px;
-    padding: 20px;
-}
-
-.sidebar h3 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    color: #00f0ff;
-}
-
-.sidebar a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px;
-    margin-bottom: 6px;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 10px;
-    font-size: 15px;
-}
-
-.sidebar a.active,
-.sidebar a:hover {
-    background: rgba(0,240,255,0.15);
-    color: #00f0ff;
-}
-
-.sidebar hr {
-    border: none;
-    height: 1px;
-    background: rgba(255,255,255,.1);
-    margin: 15px 0;
-}
-
-/* CONTENT */
-.content {
-    flex: 1;
-    background: linear-gradient(180deg,#121836,#0f142e);
-    border-radius: 18px;
-    padding: 30px;
-}
-
-.breadcrumb {
-    font-size: 14px;
-    opacity: .7;
-    margin-bottom: 20px;
-}
-
-.content h1 {
-    color: #00f0ff;
-    margin-top: 0;
-}
-
-.content h2 {
-    margin-top: 30px;
-}
+/* IDENTIQUE AU HRP */
 </style>
 </head>
-
 <body>
+<header>
+<h1>🌍 Règlement Global</h1>
+<p>Règles générales applicables à tous</p>
+<div class="search">
+<input type="text" id="searchInput" placeholder="🔍 Rechercher..." onkeyup="searchAll()">
+</div>
+</header>
 
-<!-- NAVBAR -->
-<nav>
-    <div class="nav-container">
-        <div class="logo">Astralium RP</div>
-        <div class="nav-links">
-            <a href="index.html">Accueil</a>
-            <a href="reglement.html">Règlement</a>
-            <a href="whitelist.html">Whitelist</a>
-            <a href="https://discord.gg/8SVGM7yZW6" target="_blank">Discord</a>
-        </div>
-    </div>
-</nav>
-
-<!-- PAGE -->
 <div class="wrapper">
-
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-
-    <input type="text" placeholder="🔍 Rechercher dans le règlement...">
-
-    <h3>📜 Règlement</h3>
-
-    <a href="reglement-debuter.html">🚀 Débuter</a>
-    <a href="reglement.html">📘 HRP</a>
-    <a href="reglement-global.html" class="active">🌍 Global</a>
-    <a href="reglement-legal.html">⚖️ RP Légal</a>
-    <a href="reglement-illegal.html">🔪 RP Illégal</a>
-
-    <hr>
-
-    <a href="index.html">⬅ Retour accueil</a>
-
-</aside>
-
-
-    <!-- CONTENT -->
-    <main class="content">
-        <div class="breadcrumb">
-            Accueil > Règlement > Global
-        </div>
-
-        <h1>Règlement Global</h1>
-
-        <p>
-            Le règlement global s’applique à l’ensemble des joueurs,
-            sans exception, quelle que soit leur situation RP.
-        </p>
-
-        <h2>1. Respect général</h2>
-        <p>
-            Le respect entre joueurs est obligatoire.  
-            Toute forme de harcèlement, provocation ou toxicité est interdite.
-        </p>
-
-        <h2>2. Utilisation des bugs</h2>
-        <p>
-            L’exploitation de bugs ou failles est strictement interdite
-            et doit être signalée au staff.
-        </p>
-
-        <h2>3. Fair-play</h2>
-        <p>
-            Le fair-play est exigé en toute circonstance.
-            Chercher à “gagner” au détriment du RP est sanctionnable.
-        </p>
-
-        <h2>4. Sanctions</h2>
-        <p>
-            Le non-respect du règlement global peut entraîner
-            un avertissement, un kick, un jail RP ou un bannissement.
-        </p>
-    </main>
-
+<div class="sidebar">
+<a href="reglement-debuter.html">🚀 Débuter</a>
+<a href="reglement.html">📘 HRP</a>
+<a href="reglement-global.html" class="active">🌍 Global</a>
+<a href="reglement-legal.html">⚖️ RP Légal</a>
+<a href="reglement-illegal.html">🔪 RP Illégal</a>
+<hr>
+<a href="index.html">⬅ Accueil</a>
 </div>
 
+<div class="content">
+<div class="card"><h2>🎭 Fair-play</h2><p>Le fair-play est obligatoire en toutes circonstances.</p></div>
+<div class="card"><h2>📵 No RP</h2><p>Le NoRP, MetaGaming et PowerGaming sont interdits.</p></div>
+<div class="card"><h2>⚖️ Sanctions</h2><p>Toute infraction peut entraîner une sanction.</p></div>
+</div>
+</div>
 </body>
 </html>
