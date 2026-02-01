@@ -6,241 +6,100 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0a0f1f;
-    color: #ffffff;
-    padding-top: 70px;
-}
-
-/* NAVBAR */
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 70px;
-    background: rgba(10,15,31,.95);
-    z-index: 1000;
-}
-
-.nav-container {
-    max-width: 1200px;
-    height: 70px;
-    margin: auto;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-    color: #00f0ff;
-    font-weight: bold;
-    font-size: 22px;
-}
-
-.nav-links a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    margin-left: 20px;
-}
-
-/* LAYOUT */
-.wrapper {
-    max-width: 1200px;
-    margin: 40px auto;
-    display: flex;
-    gap: 30px;
-    padding: 0 20px;
-}
-
-/* SIDEBAR */
-.sidebar {
-    width: 260px;
-    background: linear-gradient(180deg,#121836,#0f142e);
-    border-radius: 18px;
-    padding: 20px;
-}
-
-.sidebar h3 {
-    color: #00f0ff;
-}
-
-.sidebar a {
-    display: block;
-    padding: 12px;
-    margin-bottom: 6px;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 10px;
-}
-
-.sidebar a.active,
-.sidebar a:hover {
-    background: rgba(0,240,255,0.15);
-    color: #00f0ff;
-}
-
-.sidebar hr {
-    border: none;
-    height: 1px;
-    background: rgba(255,255,255,.1);
-    margin: 15px 0;
-}
-
-/* CONTENT */
-.content {
-    flex: 1;
-    background: linear-gradient(180deg,#121836,#0f142e);
-    border-radius: 18px;
-    padding: 30px;
-}
-
-.content h1 {
-    color: #00f0ff;
-    margin-top: 0;
-}
-
-/* QUICK ACCESS */
-.quick-access {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-    gap: 15px;
-    margin: 30px 0;
-}
-
-.quick-card {
-    background: rgba(0,0,0,.25);
-    padding: 18px;
-    border-radius: 14px;
-    border: 1px solid rgba(0,240,255,.15);
-}
-
-.quick-card h4 {
-    margin: 0 0 8px;
-    color: #00f0ff;
-}
-
-/* SECTIONS */
-.section {
-    margin-top: 40px;
-}
-
-.section h2 {
-    color: #00f0ff;
-    margin-bottom: 10px;
-}
+body{margin:0;font-family:Arial;background:#0a0f1f;color:#fff}
+header{padding:25px;text-align:center;background:linear-gradient(135deg,#001b3a,#0a0f1f)}
+header h1{color:#00f0ff}
+.search{max-width:600px;margin:20px auto}
+.search input{width:100%;padding:12px;border-radius:10px;border:none}
+.wrapper{max-width:1200px;margin:40px auto;display:flex;gap:30px}
+.sidebar{width:260px;background:#121836;border-radius:16px;padding:20px}
+.sidebar a{display:block;padding:12px;color:#fff;text-decoration:none;border-radius:10px}
+.sidebar a.active,.sidebar a:hover{background:rgba(0,240,255,.15);color:#00f0ff}
+.content{flex:1;background:#121836;border-radius:16px;padding:30px}
+.card{background:#0f142e;border-radius:14px;padding:20px;margin-bottom:20px}
+.result{background:#0f142e;padding:15px;border-radius:12px;margin-top:10px}
+.result a{color:#00f0ff;text-decoration:none;font-weight:bold}
 </style>
 </head>
 
 <body>
 
-<nav>
-    <div class="nav-container">
-        <div class="logo">Astralium RP</div>
-        <div class="nav-links">
-            <a href="index.html">Accueil</a>
-            <a href="reglement.html">Règlement</a>
-            <a href="whitelist.html">Whitelist</a>
-            <a href="https://discord.gg/8SVGM7yZW6" target="_blank">Discord</a>
-        </div>
-    </div>
-</nav>
+<header>
+<h1>🚀 Débuter sur Astralium RP</h1>
+<p>Guide complet pour bien commencer</p>
+
+<div class="search">
+<input type="text" id="searchInput" placeholder="🔍 Rechercher dans tous les règlements..." onkeyup="searchAll()">
+</div>
+</header>
 
 <div class="wrapper">
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-
-    <input type="text" placeholder="🔍 Rechercher dans le règlement...">
-
-    <h3>📜 Règlement</h3>
-
-    <a href="reglement-debuter.html" class="active">🚀 Débuter</a>
-    <a href="reglement.html">📘 HRP</a>
-    <a href="reglement-global.html">🌍 Global</a>
-    <a href="reglement-legal.html">⚖️ RP Légal</a>
-    <a href="reglement-illegal.html">🔪 RP Illégal</a>
-
-    <hr>
-
-    <a href="index.html">⬅ Retour accueil</a>
-
-</aside>
-
-
-    <!-- CONTENT -->
-    <main class="content">
-
-        <h1>🚀 Débuter sur Astralium RP</h1>
-        <p>
-            Cette section est destinée aux nouveaux joueurs afin de leur
-            permettre de comprendre rapidement le fonctionnement du serveur
-            et de commencer un RP cohérent.
-        </p>
-
-        <!-- CARTES -->
-        <div class="quick-access">
-            <div class="quick-card">
-                <h4>🎮 Connexion</h4>
-                <p>Rejoindre le serveur et accéder à la ville.</p>
-            </div>
-            <div class="quick-card">
-                <h4>🧍 Personnage</h4>
-                <p>Créer un personnage crédible et réaliste.</p>
-            </div>
-            <div class="quick-card">
-                <h4>⌨️ Touches & HUD</h4>
-                <p>Configurer ton interface et tes raccourcis.</p>
-            </div>
-            <div class="quick-card">
-                <h4>💼 Activités</h4>
-                <p>Trouver un emploi ou développer ton RP.</p>
-            </div>
-            <div class="quick-card">
-                <h4>🆘 Support</h4>
-                <p>Contacter le staff en cas de problème.</p>
-            </div>
-        </div>
-
-        <!-- SECTIONS -->
-        <div class="section">
-            <h2>🔌 Connexion au serveur</h2>
-            <p>
-                Tu peux rejoindre Astralium RP via la liste FiveM
-                ou en utilisant l’adresse communiquée par le staff.
-            </p>
-        </div>
-
-        <div class="section">
-            <h2>🧍 Création de personnage</h2>
-            <p>
-                Ton personnage doit respecter un minimum de cohérence :
-                nom réaliste, comportement RP et respect des règles HRP.
-            </p>
-        </div>
-
-        <div class="section">
-            <h2>💼 Trouver une activité</h2>
-            <p>
-                Tu peux commencer par un métier légal, explorer la ville
-                ou créer des interactions RP avec d’autres joueurs.
-            </p>
-        </div>
-
-        <div class="section">
-            <h2>🆘 Aide & problèmes</h2>
-            <p>
-                En cas de souci technique ou RP, contacte le staff via
-                les outils prévus ou le Discord officiel.
-            </p>
-        </div>
-
-    </main>
-
+<div class="sidebar">
+<a href="reglement-debuter.html" class="active">🚀 Débuter</a>
+<a href="reglement.html">📘 HRP</a>
+<a href="reglement-global.html">🌍 Global</a>
+<a href="reglement-legal.html">⚖️ RP Légal</a>
+<a href="reglement-illegal.html">🔪 RP Illégal</a>
+<hr>
+<a href="index.html">⬅ Accueil</a>
 </div>
+
+<div class="content" id="content">
+
+<div class="card">
+<h2>🔑 Connexion</h2>
+<p>Rejoins Astralium RP via FiveM et assure-toi d’avoir Discord ouvert.</p>
+</div>
+
+<div class="card">
+<h2>🧍 Création du personnage</h2>
+<p>Nom réaliste, comportement cohérent et respect du RP.</p>
+</div>
+
+<div class="card">
+<h2>💼 Trouver une activité</h2>
+<p>Commence par un métier légal ou explore la ville.</p>
+</div>
+
+<div class="card">
+<h2>🆘 Aide & support</h2>
+<p>En cas de problème, contacte le staff via Discord.</p>
+</div>
+
+<div id="results"></div>
+</div>
+</div>
+
+<script>
+const files=[
+{file:"reglement-debuter.html",label:"Débuter"},
+{file:"reglement.html",label:"HRP"},
+{file:"reglement-global.html",label:"Global"},
+{file:"reglement-legal.html",label:"RP Légal"},
+{file:"reglement-illegal.html",label:"RP Illégal"}
+];
+
+async function searchAll(){
+const q=document.getElementById("searchInput").value.toLowerCase();
+const box=document.getElementById("results");
+box.innerHTML="";
+if(q.length<3)return;
+
+for(const f of files){
+const res=await fetch(f.file);
+const txt=(await res.text()).replace(/<[^>]*>/g," ");
+const i=txt.toLowerCase().indexOf(q);
+if(i!==-1){
+box.innerHTML+=`
+<div class="result">
+<a href="${f.file}">📄 ${f.label}</a>
+<p>…${txt.substring(i-40,i+120)}…</p>
+</div>`;
+}
+}
+}
+</script>
 
 </body>
 </html>
