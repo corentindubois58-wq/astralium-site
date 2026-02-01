@@ -47,10 +47,6 @@ nav {
     margin-left: 20px;
 }
 
-.nav-links a:hover {
-    color: #00f0ff;
-}
-
 /* LAYOUT */
 .wrapper {
     max-width: 1200px;
@@ -62,28 +58,38 @@ nav {
 
 /* SIDEBAR */
 .sidebar {
-    width: 260px;
+    width: 270px;
     background: linear-gradient(180deg,#121836,#0f142e);
     border-radius: 18px;
     padding: 20px;
 }
 
 .sidebar h3 {
-    margin-top: 0;
-    margin-bottom: 15px;
     color: #00f0ff;
+    margin-top: 20px;
+}
+
+/* SEARCH SIDEBAR */
+.sidebar-search input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,240,255,.25);
+    background: rgba(0,0,0,.25);
+    color: #ffffff;
+    font-size: 14px;
 }
 
 .sidebar a {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 12px;
+    padding: 11px;
     margin-bottom: 6px;
     color: #ffffff;
     text-decoration: none;
     border-radius: 10px;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .sidebar a.active,
@@ -122,25 +128,7 @@ nav {
     margin-top: 30px;
 }
 
-/* GLOBAL SEARCH */
-.global-search {
-    margin: 20px 0 30px;
-}
-
-.global-search input {
-    width: 100%;
-    padding: 14px 18px;
-    border-radius: 12px;
-    border: 1px solid rgba(0,240,255,.25);
-    background: rgba(0,0,0,.25);
-    color: #ffffff;
-    font-size: 15px;
-}
-
-#globalResults {
-    margin-top: 15px;
-}
-
+/* SEARCH RESULT */
 .result-item {
     background: rgba(0,0,0,.25);
     border: 1px solid rgba(0,240,255,.15);
@@ -165,7 +153,6 @@ nav {
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
     <div class="nav-container">
         <div class="logo">Astralium RP</div>
@@ -180,63 +167,67 @@ nav {
 
 <div class="wrapper">
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-        <h3>📜 Règlement</h3>
+<!-- SIDEBAR -->
+<aside class="sidebar">
 
-        <a href="reglement-debuter.html">🚀 Débuter</a>
-        <a href="reglement.html" class="active">📘 HRP</a>
-        <a href="reglement-global.html">🌍 Global</a>
-        <a href="reglement-legal.html">⚖️ RP Légal</a>
-        <a href="reglement-illegal.html">🔪 RP Illégal</a>
+    <!-- SEARCH -->
+    <div class="sidebar-search">
+        <input
+            type="text"
+            id="globalSearchInput"
+            placeholder="🔍 Rechercher..."
+            onkeyup="globalSearch()">
+    </div>
 
-        <hr>
+    <h3>📖 Comprendre</h3>
+    <a href="#comprendre">📖 Comprendre le règlement</a>
 
-        <a href="index.html">⬅ Retour accueil</a>
-    </aside>
+    <hr>
 
-    <!-- CONTENT -->
-    <main class="content">
-        <div class="breadcrumb">
-            Accueil > Règlement > HRP
-        </div>
+    <h3>📜 Règlement</h3>
+    <a href="reglement-debuter.html">🚀 Débuter</a>
+    <a href="reglement.html" class="active">📘 HRP</a>
+    <a href="reglement-global.html">🌍 Global</a>
+    <a href="reglement-legal.html">⚖️ RP Légal</a>
+    <a href="reglement-illegal.html">🔪 RP Illégal</a>
 
-        <h1>Règlement HRP</h1>
+    <hr>
+    <a href="index.html">⬅ Retour accueil</a>
+</aside>
 
-        <!-- GLOBAL SEARCH -->
-        <div class="global-search">
-            <input
-                type="text"
-                id="globalSearchInput"
-                placeholder="🔍 Recherche globale dans tous les règlements..."
-                onkeyup="globalSearch()">
-            <div id="globalResults"></div>
-        </div>
+<!-- CONTENT -->
+<main class="content">
 
-        <p>
-            Le règlement HRP encadre le comportement des joueurs en dehors du roleplay.
-            Le respect, la communication et la maturité sont obligatoires sur Astralium RP.
-        </p>
+<div class="breadcrumb">
+    Accueil > Règlement > HRP
+</div>
 
-        <h2>1. Respect</h2>
-        <p>
-            Aucun propos haineux, insultant, discriminatoire ou provocateur
-            n’est toléré.
-        </p>
+<h1>Règlement HRP</h1>
 
-        <h2>2. Comportement</h2>
-        <p>
-            Tout abus, troll, provocation volontaire ou comportement toxique
-            est passible de sanction.
-        </p>
+<section id="comprendre">
+    <h2>📖 Comprendre le règlement</h2>
+    <p>
+        Le règlement a pour objectif de garantir une expérience RP sérieuse,
+        équilibrée et respectueuse pour tous les joueurs.
+    </p>
+    <p>
+        Chaque joueur est tenu de connaître et d’appliquer l’ensemble des règles.
+        L’ignorance du règlement n’excuse en aucun cas une infraction.
+    </p>
+</section>
 
-        <h2>3. Staff</h2>
-        <p>
-            Les décisions du staff doivent être respectées.
-            Toute contestation se fait calmement et hors RP.
-        </p>
-    </main>
+<h2>1. Respect</h2>
+<p>Aucun propos haineux, insultant ou discriminatoire n’est toléré.</p>
 
+<h2>2. Comportement</h2>
+<p>Tout comportement toxique ou volontairement nuisible est sanctionnable.</p>
+
+<h2>3. Staff</h2>
+<p>Les décisions du staff sont souveraines et doivent être respectées.</p>
+
+<div id="globalResults"></div>
+
+</main>
 </div>
 
 <script>
@@ -249,38 +240,23 @@ const reglementPages = [
 ];
 
 async function globalSearch() {
-    const query = document.getElementById("globalSearchInput").value.toLowerCase();
-    const resultsBox = document.getElementById("globalResults");
-
-    resultsBox.innerHTML = "";
-    if (query.length < 3) return;
+    const q = document.getElementById("globalSearchInput").value.toLowerCase();
+    const box = document.getElementById("globalResults");
+    box.innerHTML = "";
+    if (q.length < 3) return;
 
     for (const page of reglementPages) {
-        try {
-            const res = await fetch(page.file);
-            const text = await res.text();
+        const res = await fetch(page.file);
+        const text = (await res.text()).replace(/<[^>]*>/g," ");
+        const idx = text.toLowerCase().indexOf(q);
 
-            const cleanText = text
-                .replace(/<[^>]*>/g, " ")
-                .replace(/\s+/g, " ");
-
-            const index = cleanText.toLowerCase().indexOf(query);
-
-            if (index !== -1) {
-                const excerpt = cleanText.substring(
-                    Math.max(0, index - 60),
-                    index + 120
-                );
-
-                resultsBox.innerHTML += `
-                    <div class="result-item">
-                        <a href="${page.file}">📄 ${page.label}</a>
-                        <p>…${excerpt}…</p>
-                    </div>
-                `;
-            }
-        } catch (e) {
-            console.error("Erreur recherche :", page.file);
+        if (idx !== -1) {
+            const excerpt = text.substring(idx-60, idx+120);
+            box.innerHTML += `
+            <div class="result-item">
+                <a href="${page.file}">📄 ${page.label}</a>
+                <p>…${excerpt}…</p>
+            </div>`;
         }
     }
 }
